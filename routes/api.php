@@ -25,5 +25,6 @@ Route::namespace('Api')->group(function () {
         'middleware'=>'auth:api'
     ], function() {
         Route::get('index', [AuthController::class, 'index']);
+        Route::post('logout', [AuthController::class, 'logout']);
     });
 });
